@@ -1,0 +1,123 @@
+{
+    "CourseWork": [
+
+        {
+            "courseNumber": "COSC 102",
+            "name": "Introduction to Computer Science II",
+            "category": "Computer Science",
+            "active": false
+            
+        },
+        {
+            "courseNumber": "COSC 230",
+            "name": "Computer Organization and Architecture",
+            "category": "Computer Science",
+            "active": false
+            
+        },
+        {
+            "courseNumber": "COSC 202",
+            "name": "Data Structures and Algorithms I",
+            "category": "Computer Science",
+            "active": false
+            
+        },
+        {
+            "courseNumber": "COSC 307",
+            "name": "Honors Data Structures and Algorithms II",
+            "category": "Computer Science",
+            "active": false
+        },
+        {
+            "courseNumber": "COSC 317",
+            "name": "Honors Discrete Structures",
+            "category": "Computer Science",
+            "active": false
+        },
+        {
+            "courseNumber": "COSC 312",
+            "name": "Algorithm Analysis/Automata",
+            "category": "Computer Science",
+            "active": false
+        },
+        {
+            "courseNumber": "COSC 325",
+            "name": "Introduction to Machine Learning",
+            "category": "Computer Science",
+            "active": false
+        },
+        {
+            "courseNumber": "COSC 340",
+            "name": "Software Engineering",
+            "category": "Computer Science",
+            "active": false
+        },
+        {
+            "courseNumber": "COSC 360",
+            "name": "Systems Programming",
+            "category": "Computer Science",
+            "active": false
+        },
+        {
+            "courseNumber": "COSC 361",
+            "name": "Operating Systems",
+            "category": "Computer Science",
+            "active": true
+        },
+        {
+            "courseNumber": "ECE 414",
+            "name": "Introduction to Reinforcement Learning",
+            "category": "Computer Science",
+            "active": true
+        },
+        {
+            "courseNumber": "EF 157",
+            "name": "Honors Engineering Fundamentals I",
+            "category": "Mathematics",
+            "active": false
+        },
+        {
+            "courseNumber": "EF 158",
+            "name": "Honors Engineering Fundamentals II",
+            "category": "Mathematics",
+            "active": false
+        },
+        {
+            "courseNumber": "MATH 148",
+            "name": "Honors Calculus II",
+            "category": "Mathematics",
+            "active": false
+        },
+        {
+            "courseNumber": "MATH 251",
+            "name": "Linear Algebra",
+            "category": "Mathematics",
+            "active": false
+        },
+        {
+            "courseNumber": "ECE 313",
+            "name": "Probability and Random Variables",
+            "category": "Mathematics",
+            "active": false
+        },
+        {
+            "courseNumber": "MATH 231",
+            "name": "Differential Equations",
+            "category": "Mathematics",
+            "active": true
+        },
+        {
+            "courseNumber": "CHEM 260",
+            "name": "Foundations of Organic Chemistry",
+            "category": "Chemistry",
+            "active": true
+        },
+        {
+            "courseNumber": "ECE 491",
+            "name": "Robotics",
+            "category": "Robotics",
+            "active": false
+        }
+        
+    ]
+}

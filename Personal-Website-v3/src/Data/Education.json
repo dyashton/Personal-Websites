@@ -1,0 +1,14 @@
+{
+    "EducationData":[
+        {
+            "name":"University of Tennessee",
+            "year":"2023 - Present",
+            "description":"Pursuing a Bachelor of Science in Computer Science with a minor in machine learning. I am expected to graduate in May 2027. I am currently a member of the Chancellor's Honors Program, Cook Grand Honors Program, and Dean's List. During my time at UT, I have explored a variety of reserach labs ranging to micro electronics to computational chemistry. I have served as a Resident Assistant and as the events director for the Society of Asian Scientists and Engineers."
+        },
+        {
+            "name": "Merrol Hyde Magnet School",
+            "year": "2019 - 2023",
+            "description": "I graduated Merrol Hyde in 2023 with a 4.0 GPA 6 AP classes, 4 of which I achieved a 5 on the AP exam. I was a member of the National Honor Society and actively served my community. I also wrestled for all of years of Highschool and was captain for my junior and senior year. "
+        }
+    ]
+}

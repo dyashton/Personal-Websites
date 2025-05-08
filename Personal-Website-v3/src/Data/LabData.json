@@ -1,0 +1,15 @@
+{
+    "LabData":[
+        {
+            "name": "Xiaopeng Zhao's Lab",
+            "description": "This lab primarily researches the intersection of robotic assistive technologies and dementia care. I worked on implementing a quadrupedal robot as an assistive for caregivers of persons with dementia. We worked with Unitree's Go2 quadrupedal robot create a workshop to look into the feasibility of using the robot as an asssistive device. I presented this project at the Exhibition of Undergraduate Research and Creative Achievement (EURēCA) at the University of Tennessee, Knoxville."
+        },
+        {
+            "name": "Epic Lab",
+            "description": "This lab focuses on the development of novel micro electronics and how they can be used in conjunction with AI. I worked on a classifcation model to classify hand motions recorded temporally with voltage. I labelled, preprocessed, and trained a model to classify the hand motions. Additionally, I worked on the frontend app of an electric wheelchair app that utitlizes reinforcement learning to gauge how much assistance the user needs."
+        },
+        {"name": "AURAS Lab",
+            "description": "This lab works with computer vision and developing novel algorthims to advance the field of computer vision. I worked on a project that presented a model that investigates the correspondence between a 2D human demonstration and a 3D point cloud video. I labelled over 30,000 images for this project."
+    }
+    ]
+}

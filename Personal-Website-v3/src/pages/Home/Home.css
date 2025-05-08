@@ -1,0 +1,29 @@
+.carosel-container{
+    position: absolute;
+    bottom: -20%;
+    left:-10%;
+    overflow: visible;
+    background-color: blue;
+    transform-origin: center center;
+    animation: rotate 30s  infinite forwards linear;
+}
+.carosel-container:hover{
+    animation-play-state: paused;
+}
+.carosel-item{
+
+    /* background-color: rgba(255, 0, 0); */
+    transform: 
+    rotateZ(calc(var(--index) / var(--quantity) * 360deg ))
+    translateY(-600px); 
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}

@@ -1,0 +1,110 @@
+{
+    "projects": [
+        {
+            "name": "3D Rotating ASCII Cube",
+            "description": "This was a mini project to explore a fun idea that I got from the internet. I created a 3D rotating cube using ASCII characters. This 3D cube is being project onto a 2D plane so that it can be rendered to the screen. The cube can be selected and translated in the x and y plane.", 
+            "image": "", 
+            "tags":["Low Level Programming"],
+            "skills": ["C++", "ASCII Art", "Screen Buffering", "2D-3D Projections", "Linear Algebra"],
+            "link":""
+        },
+        {
+            "name": "Notex",
+            "description": "My group created a full stack desktop note taking application. I architected the structure of the app and laid out how the data would be structured. The app allows users to create, edit, and delete notes and was built using React, Electron, Flask, and Postgresql. I was primarily responsible for the frontend and backend integration. I ensured syncronization of data between the frontend and backend.", 
+            "image": "", 
+            "tags":["Software Development"],
+            "skills": ["React", "PostgreSQL", "Electron", "Flask", "Python", "JavaScript", "HTML", "CSS"],
+            "link":""
+        },
+        {
+            "name": "Credit Card Fraud Detection", 
+            "description": "My group created a model to classify credit card transactions as fraudulent or note. We created an ensemble voting classifier made up of a logistic regression, random forest, and gradient boosting classifier that yielded an accuracy of 97%. We used the Kaggle credit card fraud detection dataset to train our model. I was responsible for the data preprocessing and creating the random forest classifier.", 
+            "image": "", 
+            "tags":["Machine Learning"],
+            "skills": ["Python", "Scikit-Learn", "Pandas", "NumPy", "Matplotlib"],
+            "link":""
+        },
+        {
+            "name": "Malloc Implementation",
+            "description": "A custom implementation of malloc, free, and coalesce free list functions in C. I used the sbrk system call to allocate memory and implemented a free list to keep track of free memory. This project was a great way to learn about memory management and how malloc works under the hood.", 
+            "image": "", 
+            "tags":["Low Level Programming"],
+            "skills": ["C", "Memory Management", "System Calls", "sbrk", "Data Structures"],
+            "link":""
+        },
+        {
+            "name": "Gesture Control Car", 
+            "description": "My group created a remote controlled car that is controlled by sign language. We utilized React, Flask WebsocketIO, Arduino Uno, and a machine learning model trained by Tensorflow. Architected the integration of the 4 components to enable real-time data streaming and synchronization. This project worked in three major sectors: the frontend, backend, and hardware.", 
+            "image": "", 
+            "tags":["Robotics", "Machine Learning", "Software Development"],
+            "skills": ["Python", "OpenCV", "TensorFlow", "React", "Flask"],
+            "link":""
+        },
+        {
+            "name": "Multithreaded Chat Server", 
+            "description": "A chat server that supports multiple clients using multithreading. This program uses sockets to communicate between the server and clients allowing users to communicate through specified groupchats. The server can handle multiple clients at once and can send messages to all clients. This project was a great way to learn about multithreading, data synchronization, and networking.", 
+            "image": "", 
+            "tags":["Low Level Programming"],
+            "skills": ["C", "Multithreading", "Asynchronous Programming", "Networking", "Sockets", "Mutexes", "Data Syncronization","System Calls" ],
+            "link":""
+        },
+        {
+            "name": "Fake Make", 
+            "description": "This is my implement of the make command. This is a simple program that takes in a *.fm file and builds the project. The program will read the file and build the project according to the rules in the file. The program will also check for dependencies and build them if they are not already built.", 
+            "image": "", 
+            "tags":["Low Level Programming"],
+            "skills": ["C", "Makefile", "Shell Scripting", "Data Structures", "Topological Sorting"],
+            "link":""
+        },
+        {
+            "name": "Polynomial Regression", 
+            "description": "A polynomial regression model that the user can interact with by placing points on a canvas. The model runs continuously and updates its parameters to fit the points on the canvas", 
+            "image": "", 
+            "tags":["Machine Learning"],
+            "skills": ["TensorFlow.js", "p5.js", "JavaScript", "HTML", "CSS"],
+            "link":""
+        },
+        {
+            "name": "Weather App", 
+            "description": "This program was built using the MERN stack. It is a simple weather app that allows users to search for the weather in any city and view the weather of their current location. The app uses the OpenWeatherMap API to fetch the weather data, Rainviewer API for the map, and Spotify's API for song recommendations based on the weather.", 
+            "image": "", 
+            "tags":["Software Development"],
+            "skills": ["React", "Express.js", "MongoDB", "Spotify API", "JavaScript", "HTML", "CSS"],
+            "link":""
+        },
+        {
+            "name": "Instigram", 
+            "description": "I built a copy of Instagram's frontend using HTML, CSS, and Javascript. This was a project to practice my frontend skills and showcase my ability to create software from an given design.", 
+            "image": "", 
+            "tags":["Software Development"],
+            "skills": ["JavaScript", "HTML", "CSS"],
+            "link":""
+        },
+        {
+            "name": "Website Portfolio",
+            "description": "My personal website portfolio", 
+            "image": "", 
+            "tags":["Software Development"],
+            "skills": ["React","ShadCN", "Tailwind","JavaScript", "HTML", "CSS"],
+            "link":""
+        },
+        {
+            "name": "Hashing Algorithm",
+            "description": "This program is an implementation of a hash table. The user can input a key & value pair and the program will hash the key and store the value in the hash table. This program has two hash functions: Last7 & XOR; And two collision strategies: Linear Probing & double Hasing. The user can then print all of the key value pairs in the table.", 
+            "image": "", 
+            "tags":["Low Level Programming"],
+            "skills": ["C", "Hashing", "Data Structures", "Algorithms"],
+            "link":""
+        },
+        {
+            "name": "Shell Implementation",
+            "description": "A custom implementation of a shell the executes commands", 
+            "image": "", 
+            "tags":["Low Level Programming"],
+            "skills": ["C", "Shell Scripting", "Data Structures", "System Calls", "Forking", "Pipes"],
+            "link":""
+        }
+        
+    ]
+        
+}
