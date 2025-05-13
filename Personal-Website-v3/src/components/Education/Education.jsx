@@ -6,7 +6,7 @@ import MHLogo from "../../assets/MHLogo.png"
 import UTLogo from "../../assets/UTLogo.png"
 import { motion } from "framer-motion"
 import UTK from "../../assets/UTK.png"
-import MH from "../../assets/MerrolHyde.PNG"
+import MH from "../../assets/MerrolHyde.png"
 import EducationData from "@/Data/Education.json"
  
 export default function Education(){

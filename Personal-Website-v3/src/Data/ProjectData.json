@@ -103,6 +103,14 @@
             "tags":["Low Level Programming"],
             "skills": ["C", "Shell Scripting", "Data Structures", "System Calls", "Forking", "Pipes"],
             "link":""
+        },
+        {
+            "name": "KD Tree",
+            "description": "I created a 2D KD tree to store points on a canvas. The user can add points by clicking on the canvas and the tree will automatically update itself with each click. The user can hover over a point and highlight the children in blue.",
+            "image": "",
+            "tags":["Machine Learning", "Low Level Programming"],
+            "skills": ["C++", "SFML", "Data Structures", "Algorithms"],
+            "link":""
         }
         
     ]

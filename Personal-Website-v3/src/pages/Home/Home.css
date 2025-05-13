@@ -1,9 +1,8 @@
 .carosel-container{
     position: absolute;
-    bottom: -20%;
-    left:-10%;
+    bottom: -20vh;
+    left:-10vw;
     overflow: visible;
-    background-color: blue;
     transform-origin: center center;
     animation: rotate 30s  infinite forwards linear;
 }
@@ -15,7 +14,7 @@
     /* background-color: rgba(255, 0, 0); */
     transform: 
     rotateZ(calc(var(--index) / var(--quantity) * 360deg ))
-    translateY(-600px); 
+    translateY(-70vh); 
 }
 
 

@@ -12,6 +12,7 @@ import NotexIMG from "../../assets/Notex.gif"
 import GCarIMG from "../../assets/GCar.png"
 import FMake from "../../assets/FakeMake.gif"
 import Shell from "../../assets/Shell.gif"
+import KDTree from "../../assets/KDTree.gif"
 import { logos } from "@/Data/Logos";
 
 export default function ProjectTab({Tab}){
@@ -27,7 +28,8 @@ export default function ProjectTab({Tab}){
         "Notex": NotexIMG,
         "Gesture Control Car": GCarIMG,
         "Fake Make": FMake,
-        "Shell Implementation": Shell
+        "Shell Implementation": Shell,
+        "KD Tree": KDTree
     };
     function filterProjects(){
         const filterProjects = ProjectData.projects.filter((project) => {
@@ -51,9 +53,9 @@ export default function ProjectTab({Tab}){
     function getProjectComponent(project){
 
               return <div key={project.name} className="w-full h-full flex flex-col items-center justify-center relative">
-                    <div className="absolute top-0 left-0 flex flex-col gap-10 ">
+                    <div className="absolute top-0 left-0 flex flex-col gap-10 h-full">
                         <h1 className="text-3xl">{project.name}</h1>
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-4 h-2/5 w-fit flex-wrap ">
                             <motion.p 
                             initial={{ opacity:0, y: -50 }}
                             animate={{ opacity: 1, y: 0 }}
