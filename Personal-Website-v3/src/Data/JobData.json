@@ -1,0 +1,25 @@
+{
+    "JobData": [
+        {
+            "name": "Clayton",
+            "description": [
+                "Spearheaded the first AI-powered internal tool, creating a Model Context Protocol (MCP)-based RAG pipeline used by 10,000+ employees.",
+                "Developed an MCP-powered AI chatbot with a custom web interface integrated with Confluence, SharePoint, Jira, and GitHub through AWS Kendra.",
+                "Deployed the backend with Docker and Elastic Container Services under an Application Load Balancer; hosted frontend via S3 + CloudFront.",
+                "Leveraged AWS Bedrock for cloud-hosted LLMs and implemented IAM roles, permissions, and policies.",
+                "Practiced Agile principles: sprint planning, ticketing, and daily stand-ups."
+            ],
+            "date": "May 2025 - August 2025",
+            "position": "Software Engineer Intern"
+        },
+        {
+            "name": "Functional Solutions",
+            "description": [
+                "Designed and developed a HIPAA-compliant medical data tracking system for the Tennessee Department of Correction, securely managing records for 320+ patients.",
+                "Implemented JSON Web Tokens and data encryption to safeguard patient information and meet HIPAA standards."
+            ],
+            "date": "November 2024 - March 2025",
+            "position": "Software Engineer Intern"
+        }
+    ]
+}
