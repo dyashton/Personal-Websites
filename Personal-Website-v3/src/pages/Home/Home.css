@@ -1,20 +1,17 @@
-.carosel-container{
+.carosel-container {
     position: absolute;
     bottom: -20vh;
-    left:-10vw;
+    left: -10vw;
     overflow: visible;
     transform-origin: center center;
-    animation: rotate 30s  infinite forwards linear;
+    animation: rotate 30s infinite forwards linear;
 }
-.carosel-container:hover{
-    animation-play-state: paused;
-}
-.carosel-item{
+
+.carosel-item {
 
     /* background-color: rgba(255, 0, 0); */
-    transform: 
-    rotateZ(calc(var(--index) / var(--quantity) * 360deg ))
-    translateY(-70vh); 
+    transform:
+        rotateZ(calc(var(--index) / var(--quantity) * 360deg)) translateY(-70vh);
 }
 
 
@@ -22,6 +19,7 @@
     0% {
         transform: rotateZ(0deg);
     }
+
     100% {
         transform: rotateZ(360deg);
     }
