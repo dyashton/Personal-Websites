@@ -14,12 +14,12 @@ function App() {
       <main className="w-full h-full flex flex-col items-center justify-center bg-neutral-950">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/credentials" element={<Credentials />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/~ady/" element={<Home />} />
+          <Route path="/~ady/home" element={<Home />} />
+          <Route path="/~ady/projects" element={<Projects />} />
+          <Route path="/~ady/experience" element={<Experience />} />
+          <Route path="/~ady/credentials" element={<Credentials />} />
+          <Route path="/~ady/contact" element={<Contact />} />
 
         </Routes>
       </main>
