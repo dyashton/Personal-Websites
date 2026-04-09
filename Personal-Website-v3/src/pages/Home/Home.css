@@ -1,7 +1,7 @@
+/* Ring radius via translateY: keep small enough that icons do not sweep into the top-left title. */
 .carosel-container {
     position: absolute;
-    bottom: -20vh;
-    left: -10vw;
+    inset: 0;
     overflow: visible;
     transform-origin: center center;
     animation: rotate 30s infinite forwards linear;
@@ -11,19 +11,17 @@
 
     /* background-color: rgba(255, 0, 0); */
     transform:
-        rotateZ(calc(var(--index) / var(--quantity) * 360deg)) translateY(-70vh);
+        rotateZ(calc(var(--index) / var(--quantity) * 360deg)) translateY(-50vh);
 }
 
 @media (max-width: 767px) {
     .carosel-container {
-        bottom: -6vh;
-        left: -4vw;
         animation-duration: 45s;
     }
 
     .carosel-item {
         transform:
-            rotateZ(calc(var(--index) / var(--quantity) * 360deg)) translateY(-26vh);
+            rotateZ(calc(var(--index) / var(--quantity) * 360deg)) translateY(-15vh);
     }
 }
 

@@ -83,12 +83,13 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, ease: "easeInOut" }}
-            className="absolute right-0 bottom-0 h-32 w-32 sm:h-40 sm:w-40 md:h-3/4 md:w-auto md:max-w-[min(40vw,20rem)] m-4 sm:m-6 md:m-10 pointer-events-none z-20">
-            <img className="rounded-full h-full w-full max-h-[40vh] object-cover drop-shadow-2xl drop-shadow-neutral-900" src={HS} alt="Headshot"/>
+            className="absolute right-0 bottom-0 h-36 w-36 sm:h-44 sm:w-44 md:h-3/4 md:w-auto md:max-w-[min(44vw,24rem)] m-4 sm:m-6 md:m-10 pointer-events-none z-20"
+            >
+            <img className="rounded-full h-full w-full max-h-[72vh] object-cover drop-shadow-2xl drop-shadow-neutral-900" src={HS} alt="Headshot"/>
             </motion.div>
             {/* In-flow height: most children are position:absolute; keep min-height on desktop so the page does not collapse when md: removes padding. */}
             <div className="pointer-events-none items-center justify-center text-neutral-200 relative z-10 h-full w-full min-h-[70vh] md:min-h-[80vh]">
-                <div className="pointer-events-auto h-fit absolute left-4 right-4 top-4 sm:left-6 sm:right-auto sm:top-6 md:inset-8 w-auto max-w-[min(100%,42rem)] text-2xl sm:text-4xl md:text-5xl text-left">
+                <div className="pointer-events-auto z-20 h-fit absolute left-4 right-4 top-4 sm:left-6 sm:right-auto sm:top-6 md:inset-8 w-auto max-w-[min(100%,42rem)] text-2xl sm:text-4xl md:text-5xl text-left">
                     Driven By A Passion For
                     <AnimatePresence mode="wait">
                         <motion.p 
@@ -109,13 +110,15 @@ export default function Home() {
                         </>
                     ) : null}
                 </div>
-                {/* Padding + min-height: .carosel-container is position:absolute (out of flow), so this row needs explicit height or it collapses. */}
-                <div className="pointer-events-none relative flex w-full items-center justify-center overflow-visible pt-28 pb-36 sm:pt-32 md:py-20 min-h-[32rem] md:min-h-[36rem]">
-                    <div
-                        style={{ "--quantity": caroselItems.length }}
-                        className="carosel-container pointer-events-auto aspect-square w-[min(18rem,82vw)] shrink-0 sm:w-80 sm:h-80 md:w-96 md:h-96"
-                    >
-                        {getCaroselItems(caroselItems)}
+                {/* Bottom-left (headshot is bottom-right); nudge past corner so the ring sits lower/left; radius in Home.css. */}
+                <div className="pointer-events-none absolute -left-15 -bottom-30 z-10 overflow-visible -translate-x-3 translate-y-3 sm:-translate-x-4 sm:translate-y-4 md:-translate-x-6 md:translate-y-6">
+                    <div className="relative aspect-square w-[min(15rem,72vw)] shrink-0 sm:w-64 sm:h-64 md:w-72 md:h-72">
+                        <div
+                            style={{ "--quantity": caroselItems.length }}
+                            className="carosel-container pointer-events-auto"
+                        >
+                            {getCaroselItems(caroselItems)}
+                        </div>
                     </div>
                 </div>
             </div>
