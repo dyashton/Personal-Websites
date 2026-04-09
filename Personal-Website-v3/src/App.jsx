@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import Navbar from './components/custom/Navbar'
 import Home from './pages/Home/Home'
@@ -10,8 +9,8 @@ import { Routes, Route } from 'react-router-dom'
 function App() {
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center bg-neutral-950">
-      <main className="w-full h-full flex flex-col items-center justify-center bg-neutral-950">
+    <div className="w-full min-h-0 flex-1 flex flex-col items-center justify-center bg-neutral-950">
+      <main className="w-full min-h-0 flex-1 flex flex-col items-stretch justify-start bg-neutral-950">
         <Navbar />
         <Routes>
           <Route path="/~ady/" element={<Home />} />

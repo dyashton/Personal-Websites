@@ -1,81 +1,112 @@
-import { useState, useEffect } from "react"
+import { useState } from "react";
 import { Separator } from "@radix-ui/react-separator";
-import { motion } from "framer-motion";
-import JobData from "@/Data/JobData.json"
-import FSLogo from "../../assets/FSLogo.png"
-import ClaytonLogo from "../../assets/ClaytonLogo.png"
-import ClaytonPic from "../../assets/Clayton Internship Collage.png"
-export default function Research() {
-    const [Job, setJob] = useState("Clayton");
-    const JobDict = {
-        "Clayton": ClaytonLogo,
+import JobData from "@/Data/JobData.json";
+import FSLogo from "../../assets/FSLogo.png";
+import ClaytonLogo from "../../assets/ClaytonLogo.png";
+import ClaytonPic from "../../assets/Clayton Internship Collage.png";
+
+const JOBS = ["Clayton", "Functional Solutions"];
+
+export default function Professional() {
+    const [job, setJob] = useState("Clayton");
+
+    const jobDict = {
+        Clayton: ClaytonLogo,
         "Functional Solutions": FSLogo,
-    }
+    };
     const shadowDict = {
-        "Clayton": "drop-shadow-[0_0px_10px_rgba(255,255,255,0.1)]",
+        Clayton: "drop-shadow-[0_0px_10px_rgba(255,255,255,0.1)]",
         "Functional Solutions": "drop-shadow-[0_0px_5px_rgba(255,255,255,0.5)]",
-    }
-    const PicDict = {
-        "Clayton": ClaytonPic,
+    };
+    const picDict = {
+        Clayton: ClaytonPic,
         "Functional Solutions": null,
-    }
+    };
 
-    function getData(Job) {
-        const filteredData = JobData.JobData.filter((item) => item.name === Job);
-        console.log("Filtered Data: ", filteredData)
-        return filteredData.map((item, index) => {
-            console.log("Item: ", item.description)
-            return (
-                <div key={index + item.name} className="w-full h-full flex flex-col gap-2 text-left items-evenly justify-start relative px-10 pt-5">
-                    <div className="flex flex-row w-full items-start justify-between mb-10">
-                        <div className={`object-cover w-full h-full flex items-start`}>
-                            <img className={`rounded-sm w-40 ${shadowDict[Job]}`} src={JobDict[Job]} loading="lazy" />
-                            <Separator orientation="vertical" className="h-full w-[1px] bg-neutral-600 mx-4" />
-                            <div className="flex flex-col  ">
-                                <div className="text-2xl">{item.name}</div>
-                                <div className="text-lg text-neutral-400 ">{item.position}</div>
-                            </div>
-                        </div>
-                        <div className="w-fit whitespace-nowrap">
-                            {item.date}
+    function getData() {
+        return JobData.JobData.filter((item) => item.name === job).map((item, index) => (
+            <article
+                key={`${item.name}-${index}`}
+                className="min-w-0 space-y-8 text-left md:space-y-10"
+            >
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6 md:gap-8">
+                    <div className="flex min-w-0 flex-1 flex-col gap-4 sm:flex-row sm:items-start">
+                        <img
+                            className={`h-auto w-28 shrink-0 object-contain sm:w-36 ${shadowDict[job]}`}
+                            src={jobDict[job]}
+                            loading="lazy"
+                            alt=""
+                        />
+                        <Separator
+                            orientation="vertical"
+                            className="hidden h-24 w-px shrink-0 bg-neutral-600 sm:block"
+                        />
+                        <div className="min-w-0 space-y-1">
+                            <h3 className="text-lg font-medium tracking-tight text-neutral-100 sm:text-xl md:text-2xl">
+                                {item.name}
+                            </h3>
+                            <p className="text-[15px] text-neutral-400 sm:text-base">{item.position}</p>
                         </div>
                     </div>
-                    <div className="flex flex-row w-full h-full gap-5">
-                        <div className={`object-cover w-full h-full flex items-start ${PicDict[Job] === null ? "hidden" : ""}`}>
-                            <img className="rounded-sm " src={PicDict[Job]} loading="lazy"></img>
-                        </div>
-                        <div
-                            className={`list-disc ${PicDict[Job] === null ? 'w-full justify-start ' : 'w-5/7'
-                                } h-4/5 pl-3`}
-                        >
-                            {item.description.map((desc, idx) => (
-                                <div
-                                    key={idx}
-                                    className="w-full h-30 flex items-start justify-start list-inside"
-                                >
-                                    {desc}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
+                    <time className="shrink-0 text-sm text-neutral-500 sm:text-base">{item.date}</time>
                 </div>
-            )
-        })
+
+                <div className="flex min-w-0 flex-col gap-6 md:gap-8 lg:flex-row lg:items-start lg:gap-12">
+                    {picDict[job] ? (
+                        <div className="mx-auto w-full max-w-xl shrink-0 lg:mx-0 lg:w-2/5 lg:max-w-[min(28rem,38vw)]">
+                            <img
+                                className="w-full object-cover"
+                                src={picDict[job]}
+                                loading="lazy"
+                                alt=""
+                            />
+                        </div>
+                    ) : null}
+                    <ul
+                        className={`min-w-0 list-disc space-y-3 pl-5 text-[15px] leading-[1.65] text-neutral-300 marker:text-neutral-500 sm:text-base ${
+                            picDict[job] ? "lg:flex-1 lg:max-w-[46rem]" : "w-full lg:max-w-[52rem]"
+                        }`}
+                    >
+                        {item.description.map((desc, idx) => (
+                            <li key={idx} className="pl-1">
+                                {desc}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </article>
+        ));
     }
 
     return (
-        <div className="w-full h-full flex flex-row shadow-[0_0px_10px_rgba(255,255,255,0.1)] p-5">
-            <div className="h-full w-4/5 relative">
-                <div className="h-full">
-                    {getData(Job)}
-                </div>
-            </div>
-            <Separator orientation="vertical" className="h-full w-[1px] bg-neutral-600 mx-4" />
-            <div className="h-full w-1/5 flex flex-col gap-4 text-left items-center ">
-                <div onClick={() => setJob("Clayton")} className={`text-left w-full ${Job === "Clayton" ? "bg-neutral-300 text-neutral-800 p-2" : "hover:outline-2 hover:outline-neutral-600 p-2"}`}>Clayton</div>
-                <div onClick={() => setJob("Functional Solutions")} className={`text-left w-full ${Job === "Functional Solutions" ? "bg-neutral-300 text-neutral-800 p-2" : "hover:outline-2 hover:outline-neutral-600 p-2"}`}>Functional Solutions</div>
-            </div>
+        <div className="flex w-full min-w-0 flex-col gap-8 border border-neutral-800/60 bg-neutral-950/40 p-4 sm:p-6 md:flex-row md:gap-10 md:p-8 lg:gap-12 lg:p-10">
+            <div className="min-h-0 min-w-0 flex-1 overflow-y-auto pr-1">{getData()}</div>
+
+            <Separator orientation="horizontal" className="bg-neutral-600 md:hidden" />
+            <Separator
+                orientation="vertical"
+                className="hidden bg-neutral-600 md:block md:min-h-[12rem] md:self-stretch"
+            />
+
+            <aside className="flex w-full shrink-0 flex-col gap-1 sm:max-w-xs md:w-48">
+                <p className="mb-1 text-xs font-medium uppercase tracking-wide text-neutral-500">
+                    Role
+                </p>
+                {JOBS.map((name) => (
+                    <button
+                        key={name}
+                        type="button"
+                        onClick={() => setJob(name)}
+                        className={`border-l-2 px-3 py-2.5 text-left text-sm transition-colors sm:text-base ${
+                            job === name
+                                ? "border-white bg-neutral-800/90 text-neutral-100"
+                                : "border-transparent text-neutral-300 hover:bg-neutral-900/80 hover:text-neutral-100"
+                        } `}
+                    >
+                        {name}
+                    </button>
+                ))}
+            </aside>
         </div>
-    )
+    );
 }

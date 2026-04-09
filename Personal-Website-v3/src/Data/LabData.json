@@ -1,12 +1,20 @@
 {
     "LabData": [
         {
-            "name": "Dr. Kostas' Lab",
+            "name": "Dr. Vogiatzis' Lab",
             "description": [
                 "Developed and fine-tuned Transpharmer, a transformer-based molecular generator, for de novo design of NLRP3 inhibitors relevant to Alzheimer’s disease.",
                 "Implemented unconditional and conditional generation workflows, benchmarking against the known inhibitor GDC-2394 to evaluate scaffold novelty and larity.",
                 "Integrated a custom XGBoost binding affinity predictor trained on MD simulation outputs to guide reinforcement learning.",
                 "Designed a reinforcement learning pipeline with policy gradient optimization, incorporating drug-likeness constraints (Lipinski, MW, logP) to prioritize realistic molecules."
+            ]
+        },{
+            "name": "Dr. Coble's Lab",
+            "description": [ "Architected a LangGraph-based multi-agent stack with meta-optimizing policies, complex orchestration, and integrated tool use.",
+                "Developed a comprehensive knowledge graph providing insight into sheet metal forming",
+                "Integrated knowledge graphs and vector databases into an LLM's generation process for an enhanced RAG pipeline",
+                "Used Gemini and langchain to develop this pipeline",
+                "Curated a sheet metal forming specific dataset to be implemented in knowledge graphs and vector databases"
             ]
         },
         {

@@ -14,6 +14,19 @@
         rotateZ(calc(var(--index) / var(--quantity) * 360deg)) translateY(-70vh);
 }
 
+@media (max-width: 767px) {
+    .carosel-container {
+        bottom: -6vh;
+        left: -4vw;
+        animation-duration: 45s;
+    }
+
+    .carosel-item {
+        transform:
+            rotateZ(calc(var(--index) / var(--quantity) * 360deg)) translateY(-26vh);
+    }
+}
+
 
 @keyframes rotate {
     0% {

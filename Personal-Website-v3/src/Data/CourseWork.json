@@ -62,13 +62,13 @@
             "courseNumber": "COSC 361",
             "name": "Operating Systems",
             "category": "Computer Science",
-            "active": true
+            "active": false
         },
         {
             "courseNumber": "ECE 414",
             "name": "Introduction to Reinforcement Learning",
             "category": "Computer Science",
-            "active": true
+            "active": false
         },
         {
             "courseNumber": "EF 157",
@@ -104,19 +104,45 @@
             "courseNumber": "MATH 231",
             "name": "Differential Equations",
             "category": "Mathematics",
-            "active": true
+            "active": false
         },
         {
             "courseNumber": "CHEM 260",
             "name": "Foundations of Organic Chemistry",
             "category": "Chemistry",
-            "active": true
+            "active": false
         },
         {
             "courseNumber": "ECE 491",
             "name": "Robotics",
             "category": "Robotics",
             "active": false
+        },
+        {
+            "courseNumber": "CHEM 370",
+            "name": "Physical Chemistry",
+            "category": "Chemistry",
+            "active": true
+        },{
+            "courseNumber": "COSC 366",
+            "name": "Cybersecurity",
+            "category": "Computer Science",
+            "active": true
+        },{
+            "courseNumber": "COSC 420",
+            "name": "Biologically-Inspired Computing",
+            "category": "Computer Science",
+            "active": true
+        },{
+            "courseNumber": "COSC 424",
+            "name": "Deep Learning",
+            "category": "Computer Science",
+            "active": true
+        },{
+            "courseNumber": "COSC 429",
+            "name": "Adv LLMs: Reason, Agents & Int",
+            "category": "Computer Science",
+            "active": true
         }
         
     ]

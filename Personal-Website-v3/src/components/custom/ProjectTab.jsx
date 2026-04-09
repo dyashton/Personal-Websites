@@ -51,28 +51,32 @@ export default function ProjectTab({Tab}){
         })
     }
     function getProjectComponent(project){
-
-              return <div key={project.name} className="w-full h-full flex flex-col items-center justify-center relative">
-                    <div className="absolute top-0 left-0 flex flex-col gap-10 h-full">
-                        <h1 className="text-3xl">{project.name}</h1>
-                        <div className="flex flex-col gap-4 h-2/5 w-fit flex-wrap ">
-                            <motion.p 
-                            initial={{ opacity:0, y: -50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, ease: "easeInOut" }} 
-                            className="text-xl">Skills</motion.p>
-                            {getSkills(project)}
-                        </div>
-                    </div>
-
-                    <div className="w-full h-3/5 flex items-center justify-end p-5">
-                        <img className="rounded-md shadow-[0px_0px_20px_rgb(50,50,50)] h-full" src={projectDict[project.name]}/>
-                    </div>
-                    <div className="w-full h-1/3 flex items-center justify-start p-5 text-lg pt-20">
-                        <p>{project.description}</p>
-
-                    </div>
+        return (
+            <div key={project.name} className="w-full flex flex-col gap-4 md:gap-8 relative px-1 py-2 md:px-2 min-h-0">
+                <h1 className="text-2xl md:text-3xl text-neutral-100 text-center lg:text-left">{project.name}</h1>
+                <div className="flex flex-col gap-2 w-full">
+                    <motion.p
+                        initial={{ opacity:0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                        className="text-lg md:text-xl text-neutral-300"
+                    >
+                        Skills
+                    </motion.p>
+                    <div className="flex flex-wrap gap-x-4 gap-y-2">{getSkills(project)}</div>
                 </div>
+                <div className="w-full flex justify-center items-center px-1">
+                    <img
+                        className="rounded-md shadow-[0px_0px_20px_rgb(50,50,50)] max-h-[min(50vh,28rem)] w-full max-w-3xl object-contain"
+                        src={projectDict[project.name]}
+                        alt={project.name}
+                    />
+                </div>
+                <div className="w-full text-base md:text-lg text-neutral-200">
+                    <p>{project.description}</p>
+                </div>
+            </div>
+        );
     }
 
     function getProjectSelector(filteredProjects){
@@ -113,16 +117,16 @@ export default function ProjectTab({Tab}){
         }
     },[FilteredProjects])
     return (
-        <div className="w-full h-full flex flex-row p-5 overflow-visible">
-            <div className="w-full h-full flex flex-col items-center ">
-                {Project?getProjectComponent(Project):null}
+        <div className="w-full h-full min-h-0 flex flex-col lg:flex-row p-3 md:p-5 gap-4 lg:gap-0 overflow-y-auto lg:overflow-visible">
+            <div className="w-full lg:w-3/5 flex flex-col items-stretch min-h-0 order-3 lg:order-1">
+                {Project ? getProjectComponent(Project) : null}
             </div>
-            <Separator orientation="vertical" className="h-full w-[1px] bg-neutral-600 mx-4"/>
-            <div className="h-full w-2/5 flex flex-col gap-4 text-left items-center overflow-visible">
-                Project Select
-                {FilteredProjects?getProjectSelector(FilteredProjects):null}
+            <Separator orientation="horizontal" className="lg:hidden w-full h-[1px] bg-neutral-600 shrink-0 order-2" />
+            <Separator orientation="vertical" className="hidden lg:block h-auto min-h-[12rem] w-[1px] bg-neutral-600 mx-4 self-stretch shrink-0 lg:order-2" />
+            <div className="w-full lg:w-2/5 flex flex-col gap-2 text-left items-stretch shrink-0 order-1 lg:order-3 max-h-52 lg:max-h-none overflow-y-auto lg:overflow-visible border border-neutral-700/60 lg:border-0 rounded-md lg:rounded-none p-3 lg:p-0">
+                <span className="text-neutral-400 text-sm font-medium">Project Select</span>
+                {FilteredProjects ? getProjectSelector(FilteredProjects) : null}
             </div>
-
         </div>
     )
 }
