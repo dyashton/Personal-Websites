@@ -197,20 +197,19 @@ export default function NeuralNetBackground({ active = true }) {
         ctx.stroke()
       }
 
-      // Active = edges carrying signal in this forward pass
+      // Active = edges carrying signal in this forward pass (static alpha/width)
       for (let ei = 0; ei < edges.length; ei++) {
         const strength = edgeActive[ei]
         if (strength < FLOW_MIN) continue
         const e = edges[ei]
         const a = nodes[e.from]
         const b = nodes[e.to]
-        const glow = strength * breath
         ctx.beginPath()
         ctx.moveTo(a.x, a.y)
         ctx.lineTo(b.x, b.y)
         ctx.strokeStyle = layerColor(e.layer)
-        ctx.globalAlpha = 0.12 + glow * 0.65
-        ctx.lineWidth = 0.8 + glow * 2
+        ctx.globalAlpha = 0.12 + strength * 0.65
+        ctx.lineWidth = 0.8 + strength * 2
         ctx.stroke()
       }
 
