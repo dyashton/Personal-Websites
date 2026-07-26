@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "personal-website-v4",
+  "name": "personalwebsite",
   "compatibility_date": "2026-07-26",
   "assets": {
     "directory": "./dist",
