@@ -7,8 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
-    "preview": "npm run build && wrangler dev",
+    "preview": "vite preview",
     "deploy": "npm run build && wrangler deploy"
+  },
+  "engines": {
+    "node": ">=22.22.0"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",
@@ -18,7 +21,6 @@
     "react-router": "^8.3.0"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "^1.47.0",
     "@tailwindcss/vite": "^4.3.3",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
