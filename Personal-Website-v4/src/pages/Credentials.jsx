@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import resumePng from '../assets/RESUME - Research 9-24-25-1.png'
-import resumePdf from '../assets/RESUME - Research 9-24-25.pdf'
-import cvPdf from '../assets/Ashton_Dy_CV 9-26-25.pdf'
-import cv1 from '../assets/Ashton_Dy_CV 9-26-25-1.png'
-import cv2 from '../assets/Ashton_Dy_CV 9-26-25-2.png'
-import cv3 from '../assets/Ashton_Dy_CV 9-26-25-3.png'
+import resumePng from '../assets/Ashton_Dy_Resume 5-31-26-1.png'
+import resumePdf from '../assets/Ashton_Dy_Resume 5-31-26.pdf'
+import cvPdf from '../assets/Ashton_Dy_CV 5-31-26.pdf'
+import cv1 from '../assets/Ashton_Dy_CV 5-31-26-1.png'
+import cv2 from '../assets/Ashton_Dy_CV 5-31-26-2.png'
+import cv3 from '../assets/Ashton_Dy_CV 5-31-26-3.png'
 
 const cvPages = [cv1, cv2, cv3]
 
